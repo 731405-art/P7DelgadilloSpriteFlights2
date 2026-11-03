@@ -5,17 +5,19 @@ public class PlayerController : MonoBehaviour
 {
     public float maxSpeed = 5f;
     public float thrustForce = 1f;
+    public GameObject boosterFlame;
     Rigidbody2D rb;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
-
     // Update is called once per frame
     void Update()
     {
-        if (Mouse.current.leftButton.isPressed) {
+        if (Mouse.current.leftButton.isPressed)
+
+        {
             // Calculate mouse direction
             Vector3 mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.value);
             Vector2 direction = (mousePos - transform.position).normalized;
@@ -34,6 +36,5 @@ public class PlayerController : MonoBehaviour
     {
         Destroy(gameObject);
     }
-
-
 }
+
