@@ -16,6 +16,14 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         if (Mouse.current.leftButton.isPressed)
+            if (Mouse.current.leftButton.wasPressedThisFrame)
+            {
+                boosterFlame.SetActive(true);
+            }
+            else if (Mouse.current.leftButton.wasReleasedThisFrame)
+            {
+                boosterFlame.SetActive(false);
+            }
 
         {
             // Calculate mouse direction
