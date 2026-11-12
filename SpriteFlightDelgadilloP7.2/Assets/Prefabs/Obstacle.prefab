@@ -186,3 +186,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c3be7413e2508142936daca66d4c60a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacles
+  maxSpinSpeed: 10
+  minSize: 0.5
+  maxSize: 2
+  minSpeed: 50
+  maxSpeed: 150
+  bounceEffectPrefab: {fileID: 5053078980878219043, guid: f2af9357768435945a2b8be92c32cec0, type: 3}
+  bounceEffect: {fileID: 5053078980878219043, guid: f2af9357768435945a2b8be92c32cec0, type: 3}
