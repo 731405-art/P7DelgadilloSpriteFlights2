@@ -70,6 +70,7 @@ public class PlayerController : MonoBehaviour
     {
         Instantiate(explosionEffect, transform.position, transform.rotation);
         restartButton.style.display = DisplayStyle.Flex;
+        borderParent.SetActive(false);
         Destroy(gameObject);
     }
 
