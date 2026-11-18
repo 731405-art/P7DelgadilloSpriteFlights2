@@ -84,8 +84,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -712631045867808456, guid: b670ab75dde984907b8570040daa08c5, type: 3}
-  m_Color: {r: 1, g: 0.627451, b: 0, a: 1}
+  m_Sprite: {fileID: -9110413771152914523, guid: c18f3b6932b7860459ead9ead91d7b6d, type: 3}
+  m_Color: {r: 1, g: 0.989607, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -159,7 +159,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 0.8828125}
+    oldSize: {x: 1.51, y: 1.32}
     newSize: {x: 1, y: 0.8828125}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -193,3 +193,4 @@ MonoBehaviour:
   maxSpeed: 150
   bounceEffectPrefab: {fileID: 5053078980878219043, guid: f2af9357768435945a2b8be92c32cec0, type: 3}
   bounceEffect: {fileID: 5053078980878219043, guid: f2af9357768435945a2b8be92c32cec0, type: 3}
+  borderParent: {fileID: 0}

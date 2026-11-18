@@ -22,6 +22,9 @@ public class PlayerController : MonoBehaviour
 
     public GameObject borderParent;
 
+    public InputAction moveForward;
+    public InputAction lookPosition;
+
     Rigidbody2D rb;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -32,6 +35,8 @@ public class PlayerController : MonoBehaviour
         restartButton.style.display = DisplayStyle.None;
         restartButton.clicked += ReloadScene;
         rb = GetComponent<Rigidbody2D>();
+        moveForward.Enable();
+        lookPosition.Enable();
     }
     // Update is called once per frame
     void Update()
@@ -41,19 +46,19 @@ public class PlayerController : MonoBehaviour
         scoreText.text = "Score: " + score;
         score = Mathf.FloorToInt(elapsedTime * scoreMultiplier);
 
-        if (Mouse.current.leftButton.isPressed)
-            if (Mouse.current.leftButton.wasPressedThisFrame)
+        if (moveForward.WasPressedThisFrame())
+            if (moveForward.IsPressed())
             {
                 boosterFlame.SetActive(true);
             }
-            else if (Mouse.current.leftButton.wasReleasedThisFrame)
+            else if (moveForward.WasReleasedThisFrame())
             {
                 boosterFlame.SetActive(false);
             }
 
         {
             // Calculate mouse direction
-            Vector3 mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.value);
+            Vector3 mousePos = Camera.main.ScreenToWorldPoint(lookPosition.ReadValue<Vector2>());
             Vector2 direction = (mousePos - transform.position).normalized;
 
             // Move player in direction of mouse
